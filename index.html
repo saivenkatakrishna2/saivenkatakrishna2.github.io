@@ -107,28 +107,13 @@
       padding-bottom: 8px;
     }
     
-    /* ABOUT SECTION - use a centered card */
-    #about .about-card {
-      background: #111;
-      border: 1px solid #444;
-      border-radius: 8px;
-      padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: justify;
-      font-size: 0.95rem;
-      color: #ccc;
-      line-height: 1.5;
-    }
-    
-    /* EXPERIENCE SECTION */
-    #experience .cards {
+    /* CARD LAYOUTS */
+    .cards {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
-    /* Use flex-grow and minimum width for a balanced card layout */
     .card {
       background: #111;
       border: 1px solid #444;
@@ -158,42 +143,7 @@
       text-align: justify;
     }
     
-    /* EDUCATION SECTION */
-    #education .education-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .edu-card {
-      background: #111;
-      border: 1px solid #444;
-      border-radius: 8px;
-      padding: 20px;
-      flex: 1 1 300px;
-      transition: transform 0.3s;
-    }
-    .edu-card:hover {
-      transform: translateY(-3px);
-    }
-    .edu-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 5px;
-      color: #fff;
-    }
-    .edu-card span {
-      display: block;
-      font-size: 0.9rem;
-      color: #888;
-      margin-bottom: 10px;
-    }
-    .edu-card p {
-      font-size: 0.95rem;
-      line-height: 1.4;
-      text-align: justify;
-    }
-    
-    /* SKILLS SECTION (remains as before) */
+    /* SKILLS GRID */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -267,7 +217,6 @@
         </p>
       </div>
       <div class="hero-right reveal">
-        <!-- Replace with your actual profile image URL -->
         <img src="profile.jpg" alt="Profile Photo">
       </div>
     </div>
@@ -292,7 +241,6 @@
   <section id="experience">
     <h2 class="section-title reveal">Experience</h2>
     <div class="cards">
-      <!-- RadicalAI Experience Card -->
       <div class="card reveal">
         <h3>Artificial Intelligence Engineer Intern</h3>
         <span>RadicalAI | May 2024 - August 2024</span>
@@ -302,7 +250,6 @@
           of Python, TensorFlow, and various machine learning libraries to deliver a robust, scalable solution.
         </p>
       </div>
-      <!-- Infosys Experience Card -->
       <div class="card reveal">
         <h3>Quality Analyst</h3>
         <span>Infosys, Hyderabad, India | October 2021 - August 2023</span>
@@ -320,23 +267,19 @@
   <section id="education">
     <h2 class="section-title reveal">Education</h2>
     <div class="education-container">
-      <!-- Master's Card -->
       <div class="edu-card reveal">
         <h3>Master of Science in Information Technology</h3>
         <span>University of New Hampshire, Manchester, NH | May 2025</span>
         <p>
           Achieved a GPA of 3.90 while completing advanced coursework in Practical AI, Full Stack Development, Database Management,
-          Integrated Computing, and Information Security. This program provided a robust foundation in both theoretical and practical
-          aspects of modern IT.
+          Integrated Computing, and Information Security.
         </p>
       </div>
-      <!-- Bachelor's Card -->
       <div class="edu-card reveal">
         <h3>Bachelor in Computer Applications</h3>
         <span>Kakaraparthi Bhavanarayana College, Andhra Pradesh, India | June 2018 - July 2021</span>
         <p>
-          Earned a GPA of 3.50 with a curriculum focused on Python, Java, SQL, C, and C#. This degree laid the groundwork for my
-          passion for software development and quality assurance, enabling me to build a broad technical skill set.
+          Earned a GPA of 3.50 with a curriculum focused on Python, Java, SQL, C, and C#.
         </p>
       </div>
     </div>
@@ -377,12 +320,9 @@
       <div class="skill">MySQL</div>
       <div class="skill">MongoDB</div>
       <div class="skill">Database Design</div>
-      <div class="skill">ER Modeling</div>
       <div class="skill">Information Security</div>
-      <div class="skill">Cryptography</div>
       <div class="skill">Network Security</div>
       <div class="skill">System Design</div>
-      <div class="skill">Object-Oriented Design</div>
       <div class="skill">SDLC</div>
       <div class="skill">Cloud Security</div>
     </div>
@@ -392,29 +332,45 @@
   <section id="projects">
     <h2 class="section-title reveal">Projects</h2>
     <div class="cards">
-      <!-- CricGenie Project Card -->
+      <div class="card reveal">
+        <h3>Comparative Study of SLMs for Efficient Text Summarization</h3>
+        <span>Jan 2025 - May 2025</span>
+        <p>
+          Evaluated small language models versus a large language model on text summarization. Conducted three experiments: out-of-the-box comparison, fine-tuning an SLM on 20% of CNN/DailyMail, and training an SLM from scratch on 50% of the dataset. Assessed ROUGE, BLEU, CPU memory usage, and inference time to demonstrate SLM efficiency with near-LLM accuracy.
+        </p>
+        <p><strong>Tech Stack:</strong> Python, Hugging Face Transformers, PyTorch, Google Colab, Local CPU environments.</p>
+      </div>
       <div class="card reveal">
         <h3>CricGenie – Your Ultimate Cricket Companion</h3>
-        <span>Team Leader | May 2024</span>
+        <span>Apr 2024 - May 2024</span>
         <p>
-          I led the development of CricGenie—a dynamic web application that provides real-time cricket player information.
-          The project featured robust user authentication built in Django and seamless integration of the Cricbuzz API via RapidAPI.
-          The front-end was developed using HTML, CSS, and JavaScript (incorporating AJAX for efficient data loading), ensuring a polished experience.
+          Developed a dynamic web app with Django for user authentication and RapidAPI integration with Cricbuzz for real-time cricket data. Implemented AJAX-based front-end interactions using HTML, CSS, and JavaScript for seamless user experience.
         </p>
         <p><strong>Tech Stack:</strong> Django, Python, HTML, CSS, JavaScript, AJAX, RapidAPI.</p>
-        <p><a href="https://github.com/your-github-repo" target="_blank">View on GitHub</a></p>
       </div>
-      <!-- Fine Tuning Object Detection Project Card -->
       <div class="card reveal">
-        <h3>Fine Tuning Object Detection</h3>
-        <span>Team Leader | December 2023</span>
+        <h3>Bakery Management System – Sweet Delights</h3>
+        <span>Mar 2024</span>
         <p>
-          I managed the development of an enhanced car detection model by carefully selecting datasets and applying advanced techniques.
-          The integration of pre-trained models, coupled with rigorous testing, improved model accuracy by 20% and reduced false positives by 30%,
-          resulting in a 25% boost in overall performance.
+          Designed and implemented a digital platform to manage inventory, orders, customers, and employees using SQL and a custom database schema. Automated reporting and production scheduling to enhance operational efficiency and customer satisfaction.
         </p>
-        <p><strong>Tech Stack:</strong> Python, TensorFlow, Keras, OpenCV, Pre-trained Models.</p>
-        <p><a href="https://github.com/your-github-repo" target="_blank">View on GitHub</a></p>
+        <p><strong>Tech Stack:</strong> MySQL, SQL, Database Design, Reporting.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Car Detection with Mask R-CNN ResNet-50 FPN</h3>
+        <span>Nov 2023 - Dec 2023</span>
+        <p>
+          Fine-tuned a pre-trained Mask R-CNN ResNet-50 FPN model on a custom car dataset. Annotated data with Labelme, trained on AWS SageMaker, and achieved a 20% accuracy improvement with reduced false positives.
+        </p>
+        <p><strong>Tech Stack:</strong> Python, Detectron2, Labelme, AWS SageMaker.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Electric Vehicle Population Data Analysis</h3>
+        <span>Nov 2023 - Dec 2023</span>
+        <p>
+          Analyzed Washington State EV registration data to uncover trends in model distribution, pricing, and city-wise adoption. Employed data cleaning, exploratory analysis, and visualization techniques to deliver actionable insights.
+        </p>
+        <p><strong>Tech Stack:</strong> Python, Pandas, Matplotlib, Microsoft Excel.</p>
       </div>
     </div>
   </section>
